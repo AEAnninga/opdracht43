@@ -76,26 +76,33 @@ const hasLowerCaseCharacter = (str) => {
 // console.log(hasLowerCaseCharacter(string4))
 
 const hasDigit = (str) => {
-    let counter = 0
-    if (!isNotNull(str)) {
-        return false
-    } else {
-        for (i=0; i < str.length; i++) {
-            if (!isNaN(str[i])) {
-                console.log('This is a number')
-                counter++
-            } else {
-                console.log('This is not a number')
-            }
-        }
-    }
-    console.log(counter)
-    if (counter >= 1) {
-        return true
-    } else {
-        return false
-    }
+    let checkIfNumber = new RegExp(/[0-9]/)
+    return checkIfNumber.test(str)
 }
+const test = 'Hallo'
+console.log(hasDigit(test))
+
+// const hasDigit2 = (str) => {
+//     let counter = 0
+//     if (!isNotNull(str)) {
+//         return false
+//     } else {
+//         for (i=0; i < str.length; i++) {
+//             if (!isNaN(str[i])) {
+//                 console.log('This is a number')
+//                 counter++
+//             } else {
+//                 console.log('This is not a number')
+//             }
+//         }
+//     }
+//     console.log(counter)
+//     if (counter >= 1) {
+//         return true
+//     } else {
+//         return false
+//     }
+// }
 
 // let string5 = "Hallo12"
 // console.log(hasDigit(string5))
