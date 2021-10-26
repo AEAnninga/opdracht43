@@ -79,8 +79,8 @@ const hasDigit = (str) => {
     let checkIfNumber = new RegExp(/[0-9]/)
     return checkIfNumber.test(str)
 }
-const test = 'Hallo'
-console.log(hasDigit(test))
+// const test = '0null'
+// console.log(hasDigit(test))
 
 // const hasDigit2 = (str) => {
 //     let counter = 0
